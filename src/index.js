@@ -13,7 +13,7 @@ const refs = {
 const DEBOUNCE_DELAY = 300;
 
 const handleInput = () => {
-  if (refs.inputSearch.value !== '') {
+  if (refs.inputSearch.value.trim() !== '') {
     fetchCountries(refs.inputSearch.value.trim())
       .then(country => {
         if (country.length >= 10) {
